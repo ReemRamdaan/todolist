@@ -1,0 +1,25 @@
+<div class="container rounded p-3 container-home">
+    <h1 class="text-center my-3">My Activities</h1>
+    <div class="row p-4">
+        <div class="d-flex my-2 p-2" >
+            <h3>What I Have Today ?</h3>
+            <button (click)="deleteAllActivities()" class="btn btn-outline-danger ms-auto">Clear All <i class="fa-solid fa-trash"> </i> </button>
+        </div>
+        <div class="col-lg-6 col-md-8 col-sm-12 d-flex flex-column p-3 rounded ">
+            <div class="d-flex flex-column p-3 h-100 rounded area shadow ">
+                <textarea [(ngModel)]="subject" name="activity" id="activity" class="w-100 h-75 rounded bg-transparent border border-0" placeholder="Add New Activity ..."></textarea>
+            <button (click)="addActivity()" class="btn btn-outline-danger w-25 ms-auto my-2 ">Add</button>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 d-flex align-items-center p-3" *ngFor="let activity of myActivities;let i=index">
+            <div class="inner p-3 rounded">
+                <h3>{{activity.subject.split(' ').slice(0,2).join(' ')}}</h3>
+                <p class="text-center">{{activity.subject}}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <p class="m-0 p-0 date ">{{activity.date}}</p>
+                    <button (click)="deleteActivity(i)" class="bg-transparent border border-0"><i class="fa-solid fa-trash text-danger"></i></button>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>

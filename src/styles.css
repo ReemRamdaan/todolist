@@ -1,1 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+:root
+{
+    --main-color:#78e4f7;
+    --second-color:#023e8a;
+}
+body
+{
+    font-family: "EB Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    background:linear-gradient(45deg,var(--main-color),#c1f9cd)
+}
+.container-home
+{
+    background-color: white;
+}
+.inner
+{
+    background-color: var(--main-color);
+}
+.area,.outer
+{
+    background-color: var(--main-color);
+}
+.outer button
+{
+    color: black;
+}
+textarea
+{
+    caret-color: fuchsia;
+    color: #dd2d4a;
+}
+p
+{
+    color: black;
+}
+h1,h3
+{
+    color: var(--second-color);
+}
+h1
+{
+    background-color: var(--main-color);
+}
+.date
+{
+    color: var(--second-color);
+}
